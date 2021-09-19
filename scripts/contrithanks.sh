@@ -67,11 +67,11 @@ sed -e 's/^ //' -e 's/ $//g' -e 's/@users.noreply.github.com$/ on github/'
 # grep out the list of names from RELEASE-NOTES
 # split on ", "
 # remove leading whitespace
-grep -a "^  [^ (]" RELEASE-NOTES| \
-sed 's/, */\n/g'| \
+grep -a "^  [^ (]" RELEASE-NOTES | \
+sed 's/, */\n/g' | \
 sed 's/^ *//'
 
-)| \
+) | \
 sed -f ./docs/THANKS-filter | \
 grep -a ' ' | \
 sort -fu | \
