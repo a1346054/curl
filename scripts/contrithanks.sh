@@ -48,10 +48,10 @@ cat ./docs/THANKS
 
 (
  (
-  git log --use-mailmap $start..HEAD
+  git log --use-mailmap "$start..HEAD"
   if [ -d "$CURLWWW" ]
   then
-   git -C ../curl-www log --use-mailmap $start..HEAD
+   git -C ../curl-www log --use-mailmap "$start..HEAD"
   fi
  ) | \
 
